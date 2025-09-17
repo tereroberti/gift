@@ -50,6 +50,7 @@
       </aside>
 
       <main class="col-12 col-md-9 col-lg-10 py-4">
+        <section>
         <h1 class="mb-4 my-1 mx-3">Agregar Categoría y Subcategoría</h1>
         <form>
           <div class="row g-4 mx-3 mt-2">
@@ -106,12 +107,153 @@
 
             <!-- Botón -->
             <div class="col-12 text-end mt-3">
-              <button type="button" class="btn boton-agregar btnNoti" data-msg="Producto agregado" data-tipo="success" onclick="notificarYRedirigir('Nueva categoria creada!', 'success', 'productos.html')">
+              <button type="button" class="btn boton-agregar btnNoti" data-msg="Producto agregado" data-tipo="success" onclick="notificarYRedirigir('Nueva categoria creada!', 'success', 'categorias.html')">
                 Guardar
               </button>
             </div>
           </div>
         </form>
+        </section>
+
+
+<section class="mt-5">         
+  <h2 class="mb-4 my-1 mx-3">Borrar Categoría y Subcategoría</h2>
+       <form action="#" enctype="text/plain" method="post">
+          <div class="row g-4 mx-3 mt-2">
+            <div class="col-md-8">
+              <p>Seleccioná la categoría principal y luego se mostrarán sus subcategorías asociadas. Para borrar 
+                categorías empezá por las sub-categorías luego la categoría principal.
+              <span class="fw-bold">Recordá que ésta acción es irreversible.</span></p>
+            </div>
+
+            <!-- Select Categoría -->
+            <div class="col-md-6">
+              <label for="selectBorrarCategoria" class="form-label">Listado Categorías</label>
+              <select id="selectBorrarCategoria" class="form-select">
+                <option value="todas" selected>Todas</option>
+                <option value="floreros">Floreros</option>
+              </select>
+              <div class="mt-3">
+                <a class="nuevo-item mt-5 link text-danger" data-bs-toggle="collapse" href="#borrarCategoria" role="button" aria-expanded="false" aria-controls="borrarCategoria">
+                  <img class="mb-1" src="../img/contenedor-de-basura.png" style="height: 16px" alt="tacho de basura"> 
+                  Borrar subcategoría  
+                </a>
+
+                <!-- Acordeón Nueva Categoría -->
+                <div class="collapse mt-2" id="borrarCategoria">
+                  <div class="card card-body">
+                    <label for="inputBorrarCategoria" class="form-label">Nombre categoría a borrar</label>
+                    <input type="text" id="inputBorrarCategoria" class="form-control" placeholder="Ej: Jarrones">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Select Subcategoría -->
+            <div class="col-md-6">
+              <label for="selectBorrarSubcategoria" class="form-label">Listado Subcategoría</label>
+              <select id="selectBorrarSubcategoria" class="form-select">
+                <option value="Todas" selected>Todas</option>
+                <option value="plastico">Plástico</option>
+                <option value="vidrio">Vidrio</option>
+                <option value="ceramica">Cerámica</option>
+              </select>
+              <div class="mt-3">
+                <a class="nuevo-item mt-5 link text-danger" data-bs-toggle="collapse" href="#borrarSubcategoria" role="button" aria-expanded="false" aria-controls="borrarSubcategoria">
+                  <img class="mb-1" src="../img/contenedor-de-basura.png" style="height: 16px" alt="tacho de basura"> 
+                  Borrar subcategoría  
+               </a>
+
+                <!-- Acordeón Nueva Subcategoría -->
+                <div class="collapse mt-2" id="borrarSubcategoria">
+                  <div class="card card-body">
+                    <label for="inputBorrarSubcategoria" class="form-label">Nombre de la subcategoría a borrar</label>
+                    <input type="text" id="inputBorrarSubcategoria" class="form-control" placeholder="Ej: Cerámica blanca">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botón -->
+            <div class="col-12 text-end mt-3">
+              <button type="button" class="btn boton-eliminar btnNoti" data-msg="Producto eliminado" data-tipo="warning" onclick="notificarYRedirigir('Categoría eliminada!', 'danger', 'categorias.html')">
+                Borrar
+              </button>
+            </div>
+          </div>
+        </form>
+        </section>
+
+
+        
+<section class="mt-5">         
+  <h2 class="mb-4 my-1 mx-3">Editar Categoría y Subcategoría</h2>
+        <form action="#" enctype="text/plain" method="post">
+          <div class="row g-4 mx-3 mt-2">
+            <div class="col-md-8">
+              <p>Seleccioná la categoría principal y luego se mostrarán sus subcategorías asociadas.</p>
+            </div>
+
+            <!-- Select Categoría -->
+            <div class="col-md-6">
+              <label for="selectEditarCategoria" class="form-label">Listado Categorías</label>
+              <select id="selectEditarCategoria" class="form-select">
+                <option value="todas" selected>Todas</option>
+                <option value="floreros">Floreros</option>
+              </select>
+              <div class="mt-3">
+                 <a class="nuevo-item mt-3 link text-dark" data-bs-toggle="collapse" href="#EditarCategoria" role="button" aria-expanded="false" aria-controls="EditarCategoria">
+                 <img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit">  
+                 Editar categoría
+                </a>
+
+                <!-- Acordeón Nueva Categoría -->
+                <div class="collapse mt-2" id="EditarCategoria">
+                  <div class="card card-body">
+                    <label for="inputEditarCategoria" class="form-label">Nuevo nombre a asignar a la categoría</label>
+                    <input type="text" id="inputEditarCategoria" class="form-control" placeholder="Ej: Nuevo Nombre">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Select Subcategoría -->
+            <div class="col-md-6">
+              <label for="selectEditarSubcategoria" class="form-label">Listado Subcategoría</label>
+              <select id="selectEditarSubcategoria" class="form-select">
+                <option value="Todas" selected>Todas</option>
+                <option value="plastico">Plástico</option>
+                <option value="vidrio">Vidrio</option>
+                <option value="ceramica">Cerámica</option>
+              </select>
+              <div class="mt-3">
+                 <a class="nuevo-item mt-3 link text-dark" data-bs-toggle="collapse" href="#EditarSubcategoria" role="button" aria-expanded="false" aria-controls="EditarSubcategoria">
+                <img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit">  
+                 Editar subcategoría
+                </a>
+
+                <!-- Acordeón Nueva Subcategoría -->
+                <div class="collapse mt-2" id="EditarSubcategoria">
+                  <div class="card card-body">
+                    <label for="inputEditarSubcategoria" class="form-label">Nuevo nombre a asignar a la subcategoría</label>
+                    <input type="text" id="inputEditarSubcategoria" class="form-control" placeholder="Ej: Nuevo Nombre">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botón -->
+            <div class="col-12 text-end mt-3">
+              <button type="button" class="btn boton-editar btnNoti text-dark" data-msg="Producto agregado" data-tipo="warning" onclick="notificarYRedirigir('categoria editada!', 'warning', 'categorias.html')">
+                Editar
+              </button>
+            </div>
+          </div>
+        </form>
+        </section>
+
+
+
       </main>
     </div>
   </div>
