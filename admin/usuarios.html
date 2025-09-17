@@ -69,13 +69,74 @@
   </div>
 </div>
 
+    <div class="mb-3">
+        <!-- Botón Crear -->
+              <div class="text-end">
+                <button type="button" class="btn boton-agregar my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  + Crear nuevo Usuario
+                </button>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+
+                    <!-- Header -->
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5 link" id="exampleModalLabel">Crear Usuario</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+
+                    <!-- Body con formulario -->
+                    <div class="modal-body">
+                      <form action="#" method="post" enctype="multipart/form-data" id="formCrear">
+                        <div class="mb-3">
+                          <label for="nombre" class="form-label">Nombre</label>
+                          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Juan">
+                        </div>
+                        <div class="mb-3">
+                          <label for="apellido" class="form-label">Apellido</label>
+                          <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Perez">
+                        </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Correo electrónico</label>
+                          <input type="email" class="form-control" id="email" name="email" placeholder="juanperez@example.com">
+                        </div>
+                        <div class="mb-3">
+                          <label for="password" class="form-label">Establecer contraseña</label>
+                          <input type="password" class="form-control" id="password" name="password" placeholder="Nueva contraseña">
+                        <div class="mb-3 mt-2">
+                          <label for="avatar" class="form-label">Agregar avatar</label>
+                          <input class="form-control" type="file" id="avatar">
+                        </div>
+                        <div class="mb-3 mt-2">
+                          <label for="estado" class="form-label">Estado</label>
+                          <input type="text" class="form-control" id="estado" name="estado">
+                        </div>
+                        </div>
+                      </form>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn boton-outline-secundario" data-bs-dismiss="modal">Cancelar</button>
+                      <!-- Botón que envía el formulario -->
+                      <button type="submit" form="formCrear" class="btn boton-agregar">Guardar cambios</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+    </div>
+
 
    <!-- Listado de Usuarios -->
 <div class="card">
   <div class="card-header">
     <h5 class="mb-0">Listado de Usuarios</h5>
-    <form class="w-100 my-3 mx-auto " action="#" enctype="text/plain" method="get" role="search"> 
-      <input type="search" class="form-control" placeholder="Buscar por nombre, email, #orden" aria-label="Search"> 
+    <form class="d-flex w-100 my-3 mx-auto" action="#" enctype="text/plain" method="get" role="search" id="Buscador"> 
+      <input type="search" class="form-control w-70" placeholder="Buscar por nombre, email, #orden" aria-label="Search"> 
+      <button type="button" form="Buscador" class="btn boton-outline-secundario mx-3">Buscar</button>
     </form>
   </div>
   <div class="card-body p-0">

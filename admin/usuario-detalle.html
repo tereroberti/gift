@@ -78,7 +78,7 @@
 
                     <!-- Footer -->
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn boton-outline-secundario" data-bs-dismiss="modal">Cancelar</button>
                       <form action="#" method="post" id="formBorrar" enctype="multipart/form-data" >
                       <button type="submit"  form="formBorrar" class="btn btn-danger">Borrar</button>
                       </form>
@@ -123,6 +123,10 @@
                         <div class="mb-3">
                           <label for="password" class="form-label">Establecer nueva contraseña</label>
                           <input type="password" class="form-control" id="password" name="password" placeholder="Nueva contraseña">
+                        <div class="mb-3 mt-2">
+                          <label for="avatar" class="form-label">Agregar avatar</label>
+                          <input class="form-control" type="file" id="avatar">
+                        </div>
                         <div class="mb-3">
                           <label for="estado" class="form-label">Estado</label>
                           <input type="text" class="form-control" id="estado" name="estado">
@@ -133,7 +137,7 @@
 
                     <!-- Footer -->
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn boton-outline-secundario" data-bs-dismiss="modal">Cancelar</button>
                       <!-- Botón que envía el formulario -->
                       <button type="submit" form="formEditar" class="btn boton-editar text-dark">Guardar cambios</button>
                     </div>
